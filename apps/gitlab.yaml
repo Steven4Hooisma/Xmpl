@@ -1,9 +1,0 @@
-apiVersion: v2
-name: gitlab
-description: A Helm chart for cert-manager
-version: 1.0.0
-
-dependencies:
-  - name: gitlab
-    version:
-    repository: http://charts.gitlab.io/
