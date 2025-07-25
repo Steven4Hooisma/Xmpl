@@ -1,0 +1,10 @@
+apiVersion: v2
+name: nginx-ingress
+description: A Helm chart for deploying nginx-ingress
+type: application
+version: 0.1.0
+
+dependencies:
+  - name: nginx-ingress
+    version: "21.0.8"
+    repository: "https://charts.bitnami.com/bitnami"
