@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nginx-ingress
+  namespace: nginx-ingress
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/Steven4Hooisma/Xmpl.git
+    targetRevision: HEAD
+    path: apps/nginx-ingress
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: nginx-ingress
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
