@@ -5,10 +5,16 @@ metadata:
   namespace: nginx-ingress
 spec:
   project: default
-  source:
-    repoURL: https://github.com/Steven4Hooisma/Xmpl.git
+  sources:
+  - repoURL: https://kubernetes.github.io/ingress-nginx
+    targetRevision: 4.0.13
+    chart: ingress-nginx
+    helm:
+      valuesFiles:
+        - $values/values.yaml
+  - repoURL: https://github.com/Steven4Hooisma/Xmpl.git
     targetRevision: HEAD
-    path: apps/nginx-ingress
+    ref: values
   destination:
     server: https://kubernetes.default.svc
     namespace: nginx-ingress
