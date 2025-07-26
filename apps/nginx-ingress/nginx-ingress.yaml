@@ -11,7 +11,7 @@ spec:
     chart: ingress-nginx
     helm:
       valuesFiles:
-        - $values/apps/nginx-ingress/Values.yaml
+        - $values/apps/nginx-ingress/values.yaml
   - repoURL: https://github.com/Steven4Hooisma/Xmpl.git
     targetRevision: HEAD
     ref: values
